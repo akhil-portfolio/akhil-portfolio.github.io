@@ -59,3 +59,19 @@ document.addEventListener('click',event=>{
     button.setAttribute('aria-pressed',String(projectMediaState.zoom));button.innerHTML=projectMediaState.zoom?'Fit image <span aria-hidden="true">−</span>':'Zoom in <span aria-hidden="true">＋</span>';
   }
 });
+
+
+// GitHub Pages resilience: if a thumbnail is unavailable, use the original
+// image, which is already used by the full-size viewer. The capture phase
+// also catches errors from dynamically inserted gallery cards and dialogs.
+document.addEventListener('error', function portfolioThumbnailFallback(event) {
+  const image = event.target;
+  if (!(image instanceof HTMLImageElement)) return;
+  if (image.dataset.portfolioThumbnailFallback === 'attempted') return;
+  const source = image.getAttribute('src') || '';
+  if (!/-thumb\.webp(?=([?#]|$))/i.test(source)) return;
+  image.dataset.portfolioThumbnailFallback = 'attempted';
+  const original = source.replace(/-thumb\.webp(?=([?#]|$))/i, '.webp');
+  // Use the original only when the thumbnail genuinely fails to load.
+  image.src = original;
+}, true);

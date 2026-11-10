@@ -2,7 +2,7 @@
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const imagePath = name => `assets/${name}${/\.(?:avif|webp|png|jpe?g|svg)$/i.test(name)?'':'.webp'}`;
+const imagePath = name => { const path = `assets/${name}${/\.(?:avif|webp|png|jpe?g|svg)$/i.test(name)?'':'.webp'}`; return /^arabian-skylark-(?:home|catalogue|quote)\.jpg$/i.test(name) ? `${path}?v=20261110-new` : path; };
 const arrow = '<span class="arrow" aria-hidden="true">↗</span>';
 const star = '<svg class="hero-star" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" d="M43 0h14v32l23-23 11 11-23 23h32v14H68l23 23-11 11-23-23v32H43V68L20 91 9 80l23-23H0V43h32L9 20 20 9l23 23Z"/></svg>';
 const projects = [

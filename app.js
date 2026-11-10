@@ -95,17 +95,17 @@ const projects = [
     "detailImages": [],
     "mediaPreviews": {
       "arabian-skylark-home.jpg": {
-        "thumb": "project-details/arabian-skylark-overview-1-thumb.webp",
+        "thumb": "arabian-skylark-home.jpg",
         "width": 1357,
         "height": 932
       },
       "arabian-skylark-catalogue.jpg": {
-        "thumb": "project-details/arabian-skylark-overview-2-thumb.webp",
+        "thumb": "arabian-skylark-catalogue.jpg",
         "width": 1357,
         "height": 932
       },
       "arabian-skylark-quote.jpg": {
-        "thumb": "project-details/arabian-skylark-overview-3-thumb.webp",
+        "thumb": "arabian-skylark-quote.jpg",
         "width": 1357,
         "height": 932
       }

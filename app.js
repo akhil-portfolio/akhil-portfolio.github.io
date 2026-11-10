@@ -69,10 +69,10 @@ const projects = [
     "client": "Industrial electronics · UAE",
     "className": "web skylark",
     "image": "arabian-skylark-home.jpg",
-    "alt": "Arabian Skylark homepage with blue and green branding, industrial electronics imagery, and part-number search",
+    "alt": "Arabian Skylark website homepage shown in an earlier October 2026 design",
     "role": "Complete UI/UX design & development using AI tools",
-    "summary": "The complete UI/UX and website build, developed using AI tools.",
-    "description": "I handled the complete UI/UX design and developed the Arabian Skylark industrial-electronics website using AI tools. I shaped the browsing experience around part-number search, an inventory catalogue, and multi-item quotation requests, bringing the interface and functionality together so visitors can explore parts and prepare an enquiry.",
+    "summary": "A redesigned industrial-electronics website connecting technical services, parts discovery and streamlined enquiries.",
+    "description": "I led the UI/UX design and AI-assisted development of Arabian Skylark’s website, refining the experience around industrial electronics repair, multi-brand parts sourcing, automation services, catalogue browsing and quotation enquiries. The live website reflects the latest redesign. The screenshots below document an earlier iteration and will be replaced with updated captures.",
     "images": [
       [
         "arabian-skylark-home.jpg",
@@ -87,11 +87,11 @@ const projects = [
         "Multi-item request-for-quotation form"
       ]
     ],
-    "website": "https://arabianskylark.com/",
-    "sourceLabel": "Live website project",
-    "imageSource": "Live website capture · 27 October 2026",
+    "website": "https://www.arabianskylark.com/",
+    "sourceLabel": "Website redesign · live version",
+    "imageSource": "Earlier website capture · 27 October 2026",
     "featuredWide": true,
-    "pending": "Project year and process documentation are pending.",
+    "pending": "The gallery currently contains October 2026 screenshots. Updated captures of the redesigned live homepage, services and product catalogue are pending.",
     "detailImages": [],
     "mediaPreviews": {
       "arabian-skylark-home.jpg": {

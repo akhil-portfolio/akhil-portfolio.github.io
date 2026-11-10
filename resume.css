@@ -1,0 +1,71 @@
+.resume-scene{position:relative;background:#e9e5dc;border-radius:28px;min-width:0;height:570px;isolation:isolate;overflow:hidden;background-image:radial-gradient(ellipse at 48% 45%,#f9f5ed 0%,#e5e1d9 80%)}
+.file-scene-top{position:absolute;left:26px;right:26px;top:24px;display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.09em;color:#69645c}
+.file-scene-icon{width:34px;height:34px;border:1px solid #bdb9af;border-radius:50%;display:grid;place-items:center;font-size:19px}
+.file-handnote{position:absolute;right:40px;top:105px;font-family:Georgia,serif;font-size:20px;font-style:italic;color:#747066;transform:rotate(-9deg);transition:opacity .25s}
+.resume-folder-toggle{position:absolute;left:11%;bottom:112px;width:78%;height:325px;max-width:410px;background:none;padding:0;perspective:1100px;z-index:2;border-radius:16px;text-align:left;transform:rotate(-7deg);transition:transform .7s cubic-bezier(.22,.7,.2,1)}
+.resume-folder-toggle:focus-visible{outline:3px solid #2259e8;outline-offset:12px}
+.folder-object{display:block;position:absolute;inset:65px 0 0;transform-style:preserve-3d;filter:drop-shadow(4px 20px 15px #372e272a)}
+.folder-back{position:absolute;inset:0;border-radius:8px 14px 14px 14px;background:linear-gradient(135deg,#aaa0d4,#b6acdf);border:1px solid #8e84bb;box-shadow:inset 0 1px #e4dcff}
+.folder-tab{position:absolute;top:-27px;left:0;width:45%;height:30px;background:#b2a8de;border:1px solid #8e84bb;border-bottom:0;border-radius:10px 18px 0 0;padding:6px 17px;font-size:10px;letter-spacing:.1em;color:#39304e}
+.folder-paper{position:absolute;top:-18px;left:6%;width:87%;height:335px;padding:23px 24px;background:#fffef8;color:#292923;border-radius:3px;box-shadow:0 1px 5px #2a1f2926;transform:rotate(4deg);transition:transform .8s cubic-bezier(.22,.75,.2,1),box-shadow .8s,clip-path .8s;overflow:hidden;z-index:1;border:1px solid #e0ddd3;clip-path:inset(0 0 90px 0)}
+.paper-eyebrow{display:block;font-size:7px;font-weight:700;letter-spacing:.1em}
+.paper-name{display:block;font-size:43px;letter-spacing:-.07em;line-height:.94;margin:17px 0 15px}
+.paper-rule{display:block;width:100%;height:1px;background:#d4d3c8;margin-bottom:12px}
+.paper-section{display:block;font-size:10px;font-weight:700;margin:14px 0 6px;letter-spacing:-.02em}
+.paper-copy{display:block;font-size:9px;line-height:1.6;color:#747368}
+.paper-job{display:flex;justify-content:space-between;gap:8px;font-size:9px;line-height:1.6;border-bottom:1px solid #e7e5dc;padding:5px 0}
+.paper-job i{font-style:normal;font-size:7px;color:#77786d}
+.paper-signature{display:block;font-family:Georgia,serif;font-size:21px;font-style:italic;margin-top:15px}
+.paper-page{position:absolute;right:20px;bottom:14px;font-size:6px;letter-spacing:.05em;color:#77786d}
+.folder-front{display:flex;flex-direction:column;justify-content:space-between;position:absolute;inset:26px -2px -2px;background:linear-gradient(155deg,#c5b6f3 0%,#b7a5e9 80%);border:1px solid #9988c9;border-radius:5px 10px 14px 14px;padding:24px;z-index:3;box-shadow:inset 0 1px 0 #eee6ff,inset 0 -5px 12px #8c78b526;transform-origin:center bottom;transition:transform .8s cubic-bezier(.22,.75,.2,1)}
+.folder-front-top{display:flex;justify-content:space-between;font-size:8px;letter-spacing:.08em;line-height:1.5;color:#4a3c70}
+.folder-asterisk{width:48px;height:48px;display:grid;place-items:center;border-radius:50%;background:#e4ff59;font-size:35px;line-height:1;box-shadow:1px 2px 1px #6e60894d;transform:rotate(18deg);color:#28291f}
+.folder-title{display:block;font-size:clamp(27px,3.1vw,46px);line-height:1.02;letter-spacing:-.065em;color:#34274f;margin:15px 0 24px}
+.folder-front-bottom{display:flex;justify-content:space-between;font-size:7px;letter-spacing:.08em;color:#594b7b;padding-top:14px;border-top:1px solid #9b87c3}
+.folder-clip{position:absolute;right:25px;top:10px;z-index:4;width:12px;height:43px;border:2px solid #747679;border-radius:10px;transform:rotate(9deg);box-shadow:1px 1px 2px #352d3866;transition:transform .8s}
+.folder-clip:after{content:'';position:absolute;inset:4px 2px 5px;border:1px solid #b7b9bb;border-radius:8px}
+.resume-scene-bottom{position:absolute;left:20px;right:20px;bottom:23px;text-align:center;z-index:5}
+.folder-instruction{font-size:12px;color:#69645c;margin:0 0 12px}
+.folder-tap-hint{font-size:8px;letter-spacing:.1em;color:#7b7469}
+.resume-actions{display:flex;justify-content:center;align-items:center;gap:20px}
+.resume-actions .button{min-height:43px;font-size:12px;gap:23px;padding:12px 19px}
+.folder-close{background:transparent;font-size:11px;border-bottom:1px solid #8a8275;padding:5px 0;display:flex;gap:10px}
+.resume-folder-toggle:hover{transform:rotate(-4deg) translateY(-5px)}
+.resume-folder-toggle:hover .folder-paper{transform:rotate(2deg) translateY(-10px)}
+.file-open .resume-folder-toggle{transform:rotate(0deg);bottom:102px}
+.file-open .folder-paper,.file-open .resume-folder-toggle:hover .folder-paper{transform:translateY(-133px) rotate(-3deg);box-shadow:5px 8px 12px #2a1f2920;clip-path:inset(0)}
+.file-open .folder-front{transform:rotateX(-40deg);box-shadow:inset 0 1px #eee6ff,0 15px 15px #4b3b7026}
+.file-open .folder-clip{transform:translateY(21px) rotate(15deg)}
+.file-open .file-handnote{opacity:0}
+.file-open .folder-title{font-size:clamp(27px,3.1vw,46px)}
+.resume-dialog{border:0;padding:0;border-radius:20px;background:#fffef8;color:#20211e;width:min(1000px,calc(100% - 40px));max-height:calc(100dvh - 40px);overflow:auto;overscroll-behavior:contain}
+.resume-dialog::backdrop{background:#191e12b3;backdrop-filter:blur(8px)}
+.resume-dialog .dialog-top{background:#fffef8ee}
+.resume-document{padding:44px 48px}
+.resume-doc-header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.resume-doc-header h2{font-size:clamp(42px,5.3vw,76px);letter-spacing:-.065em;margin:19px 0 12px}
+.resume-doc-header h2>span{color:#2259e8}
+.resume-doc-tagline{font-size:14px;color:#747368}
+.resume-doc-star{font-size:88px;line-height:1;color:#2259e8}
+.resume-contact-line{display:flex;gap:23px;flex-wrap:wrap;font-size:11px;padding:22px 0;margin:23px 0 32px;border-block:1px solid #dcdcd0;color:#68695e}
+.resume-contact-line a:hover{color:#2259e8}
+.resume-columns{display:grid;grid-template-columns:.85fr 1.2fr;gap:60px}
+.resume-section{margin-bottom:30px}
+.resume-section h3{font-size:13px;font-weight:700;letter-spacing:.01em;margin-bottom:13px;line-height:1.4}
+.resume-section p{font-size:13px;line-height:1.7;color:#6b6d61}
+.resume-section p strong{font-weight:400;color:#35372e}
+.resume-job{padding:0 0 18px;margin:0 0 18px;border-bottom:1px solid #e4e3d9}
+.resume-job h4{font-size:19px;letter-spacing:-.035em;line-height:1.25;font-weight:400;margin:6px 0}
+.resume-job .resume-job-date{font-size:10px;letter-spacing:.02em}
+.resume-job p{font-size:11px}
+.resume-inline-link{display:inline-block;border-bottom:1px solid #b4b8a6;margin-top:10px;color:#343a2b;font-size:11px}
+.resume-preview-note{display:flex;align-items:start;gap:15px;padding:16px 18px;background:#eeefe5;border-radius:10px;margin-top:8px}
+.resume-preview-note>span{background:#d8fa38;font-size:8px;padding:4px 7px;border-radius:4px;letter-spacing:.08em}
+.resume-preview-note p{font-size:11px;color:#6b6d61;line-height:1.6}
+.resume-doc-actions{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-top:26px}
+@media(min-width:1600px){.resume-folder-toggle{left:calc(50% - 205px)}}
+@media(max-width:1000px) and (min-width:701px){.resume-scene{height:520px}.resume-folder-toggle{width:84%;left:8%;bottom:100px;height:295px}.folder-object{inset:55px 0 0}.folder-front{padding:17px}.folder-title{font-size:30px}.folder-paper{padding:18px;height:310px}.paper-name{font-size:36px}.file-open .folder-paper,.file-open .resume-folder-toggle:hover .folder-paper{transform:translateY(-105px) rotate(-3deg)}.folder-front-bottom{font-size:6px}.folder-instruction{font-size:11px}.file-handnote{font-size:17px;right:26px;top:100px}.file-open .resume-folder-toggle{bottom:95px}}
+@media(max-width:700px){.resume-scene{height:550px;border-radius:24px}.file-scene-top{top:20px;left:21px;right:21px;font-size:9px}.file-handnote{top:100px;right:30px;font-size:18px}.resume-folder-toggle{left:9%;width:82%;height:315px;bottom:105px;max-width:none}.folder-object{inset:65px 0 0}.folder-front{padding:21px}.folder-title,.file-open .folder-title{font-size:37px}.folder-front-bottom{font-size:6px}.folder-paper{padding:21px;height:322px}.paper-name{font-size:40px}.folder-instruction{font-size:11px}.file-open .resume-folder-toggle{bottom:100px}.file-open .folder-paper,.file-open .resume-folder-toggle:hover .folder-paper{transform:translateY(-120px) rotate(-3deg)}.resume-scene-bottom{bottom:22px}.resume-actions{gap:18px}.folder-tap-hint{font-size:7px}.resume-dialog{width:calc(100% - 20px);max-height:calc(100dvh - 20px);border-radius:15px}.resume-document{padding:27px 23px}.resume-doc-header h2{font-size:43px;margin:16px 0 13px}.resume-doc-header .eyebrow{font-size:8px}.resume-doc-tagline{font-size:12px;max-width:260px}.resume-doc-star{font-size:45px}.resume-contact-line{gap:9px 18px;font-size:10px;padding:18px 0;margin:20px 0 26px}.resume-columns{grid-template-columns:1fr;gap:0}.resume-columns>div{display:contents}.resume-section{margin-bottom:25px}.resume-section p{font-size:13px}.resume-experience{grid-row:2}.resume-preview-note{padding:14px;gap:10px}.resume-preview-note p{font-size:10px}.resume-doc-actions{align-items:start;flex-direction:column}.resume-doc-actions .button{width:100%;gap:20px}.resume-doc-actions .text-link{align-self:center}.resume-job h4{font-size:20px}.resume-job p{font-size:12px}}
+@media(max-width:360px){.resume-scene{height:510px}.resume-folder-toggle{height:290px;bottom:100px}.folder-front{padding:17px}.folder-title,.file-open .folder-title{font-size:31px}.folder-front-top{font-size:7px}.folder-asterisk{width:37px;height:37px;font-size:29px}.folder-paper{padding:17px;height:300px}.paper-name{font-size:34px}.file-open .folder-paper,.file-open .resume-folder-toggle:hover .folder-paper{transform:translateY(-105px) rotate(-3deg)}.folder-instruction{font-size:10px}.resume-actions{gap:12px}.resume-actions .button{font-size:11px;padding:12px 15px}.folder-close{font-size:10px}.resume-doc-header h2{font-size:38px}.resume-doc-star{font-size:35px}}
+@media(max-width:360px){.about-hero h1{font-size:51px}}
+@media(prefers-reduced-motion:reduce){.resume-folder-toggle,.folder-paper,.folder-front,.folder-clip,.file-handnote{transition:none!important}.resume-folder-toggle:hover{transform:rotate(-7deg)}.file-open .resume-folder-toggle:hover{transform:rotate(0)}.resume-folder-toggle:hover .folder-paper{transform:rotate(4deg)}}

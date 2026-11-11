@@ -17,7 +17,7 @@ const projects = [
     "alt": "Talent Pool employer recruitment interface with mint and teal visual system",
     "role": "UI design for candidate & employer interfaces",
     "summary": "A recruitment interface that brings job discovery and hiring into focus.",
-    "description": "I designed interface screens for Talent Pool, a recruitment platform connecting candidates and employers. The work covers job discovery, account access, applications, and hiring management, with clear layouts that help each audience find the information and actions they need.",
+    "description": "Designed Talent Pool’s candidate and employer interfaces, from job search and application tracking to job posting and applicant management. I researched existing hiring platforms to understand both user journeys, then designed and prototyped a clearer, more intuitive experience in Adobe XD.",
     "images": [
       [
         "talentpool",

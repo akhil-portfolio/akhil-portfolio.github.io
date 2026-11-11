@@ -65,14 +65,14 @@ const projects = [
     "id": "arabian-skylark",
     "title": "Arabian Skylark",
     "category": "ui",
-    "type": "UI/UX & website development",
+    "type": "B2B digital platform · UI/UX & AI-assisted development",
     "client": "Industrial electronics · UAE",
     "className": "web skylark",
     "image": "arabian-skylark-home.jpg",
     "alt": "Arabian Skylark homepage with blue and green branding, industrial electronics imagery, and part-number search",
-    "role": "Complete UI/UX design & development using AI tools",
-    "summary": "The complete UI/UX and website build, developed using AI tools.",
-    "description": "I handled the complete UI/UX design and developed the Arabian Skylark industrial-electronics website using AI tools. I shaped the browsing experience around part-number search, an inventory catalogue, and multi-item quotation requests, bringing the interface and functionality together so visitors can explore parts and prepare an enquiry.",
+    "role": "UI/UX design, product direction & AI-assisted development",
+    "summary": "A B2B digital platform for industrial products, technical services and business enquiries.",
+    "description": "Designed and developed Arabian Skylark’s B2B digital platform using ChatGPT and Claude AI for AI-assisted design and coding. I led the UI/UX direction across industrial product catalogues, product search, technical repair services, quotation requests, and business enquiries, focusing on usability, functionality, and responsive design.",
     "images": [
       [
         "arabian-skylark-home.jpg",

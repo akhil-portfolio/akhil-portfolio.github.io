@@ -4,123 +4,122 @@ const $ = (selector, root = document) => root.querySelector(selector);
 const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const imagePath = name => { const path = /^(?:talent-pool|web-design)\//.test(name) ? name : `assets/${name}${/\.(?:avif|webp|png|jpe?g|svg)$/i.test(name)?'':'.webp'}`; return /^arabian-skylark-(?:home|catalogue|quote)\.jpg$/i.test(name) ? `${path}?v=20261110-new` : path; };
 const arrow = '<span class="arrow" aria-hidden="true">↗</span>';
-const star = '<svg class="hero-star" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" d="M43 0h14v32l23-23 11 11-23 23h32v14H68l23 23-11 11-23-23v32H43V68L20 91 9 80l23-23H0V43h32L9 20 20 9l23 23Z"/"id": "talent-pool",
+const star = '<svg class="hero-star" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" d="M43 0h14v32l23-23 11 11-23 23h32v14H68l23 23-11 11-23-23v32H43V68L20 91 9 80l23-23H0V43h32L9 20 20 9l23 23Z"/></svg>';
+const projects = [
+  {
+    "id": "talent-pool",
     "title": "Talent Pool",
     "category": "ui",
     "type": "UI & UX design",
     "client": "Recruitment platform",
     "className": "talent",
     "image": "talent-pool/cover.webp",
-    "alt": "Talent Pool recruitment platform homepage presented on a laptop mockup",
+    "alt": "Talent Pool recruitment website on a laptop mockup",
     "role": "UI design for candidate & employer interfaces",
     "summary": "A recruitment interface that brings job discovery and hiring into focus.",
     "description": "Designed Talent Pool’s candidate and employer interfaces, from job search and application tracking to job posting and applicant management. I researched existing hiring platforms to understand both user journeys, then designed and prototyped a clearer, more intuitive experience in Adobe XD.",
     "images": [
-  [
-    "talent-pool/cover.webp",
-    "Talent Pool — website mockup"
-  ]
-],
-    "pending": "Project year, process documentation, and final case study are pending. Screens are taken from the existing portfolio.",
+      [
+        "talent-pool/cover.webp",
+        "Talent Pool — website mockup"
+      ]
+    ],
+    "pending": "Project year and additional research documentation are pending.",
     "detailImages": [
-  {
-    "image": "talent-pool/guest-home.webp",
-    "caption": "Platform homepage",
-    "group": "Overview",
-    "thumb": "talent-pool/guest-home.webp",
-    "kind": "Adobe XD design"
-  },
-  {
-    "image": "talent-pool/login.webp",
-    "caption": "Login and account access",
-    "group": "Candidate experience",
-    "thumb": "talent-pool/login.webp",
-    "kind": "Adobe XD design"
-  },
-  {
-    "image": "talent-pool/sign-up.webp",
-    "caption": "Account registration",
-    "group": "Candidate experience",
-    "thumb": "talent-pool/sign-up.webp",
-    "kind": "Adobe XD design"
-  },
-  {
-    "image": "talent-pool/candidate-home.webp",
-    "caption": "Candidate homepage and job recommendations",
-    "group": "Candidate experience",
-    "thumb": "talent-pool/candidate-home.webp",
-    "kind": "Adobe XD design"
-  },
-  {
-    "image": "talent-pool/candidate-search.webp",
-    "caption": "Job search and filters",
-    "group": "Candidate experience",
-    "thumb": "talent-pool/candidate-search.webp",
-    "kind": "Adobe XD design"
-  },
-  {
-    "image": "talent-pool/candidate-profile.webp",
-    "caption": "Candidate profile and application progress",
-    "group": "Candidate experience",
-    "thumb": "talent-pool/candidate-profile.webp",
-    "kind": "Adobe XD design"
-  },
-  {
-    "image": "talent-pool/employer-dashboard.webp",
-    "caption": "Employer hiring dashboard",
-    "group": "Employer experience",
-    "thumb": "talent-pool/employer-dashboard.webp",
-    "kind": "Adobe XD design"
-  },
-  {
-    "image": "talent-pool/job-post.webp",
-    "caption": "Job posting interface",
-    "group": "Employer experience",
-    "thumb": "talent-pool/job-post.webp",
-    "kind": "Adobe XD design"
-  },
-  {
-    "image": "talent-pool/company-page.webp",
-    "caption": "Company profile",
-    "group": "Employer experience",
-    "thumb": "talent-pool/company-page.webp",
-    "kind": "Adobe XD design"
-  },
-  {
-    "image": "talent-pool/pricing.webp",
-    "caption": "Employer pricing plans",
-    "group": "Employer experience",
-    "thumb": "talent-pool/pricing.webp",
-    "kind": "Adobe XD design"
-  },
-  {
-    "image": "talent-pool/pricing-alternate.webp",
-    "caption": "Additional pricing layout",
-    "group": "Employer experience",
-    "thumb": "talent-pool/pricing-alternate.webp",
-    "kind": "Adobe XD design"
-  },
-  {
-    "image": "talent-pool/team-setup.webp",
-    "caption": "Team member setup",
-    "group": "Employer experience",
-    "thumb": "talent-pool/team-setup.webp",
-    "kind": "Adobe XD design"
-  },
-  {
-    "image": "talent-pool/training-programs.webp",
-    "caption": "Training programmes",
-    "group": "Employer experience",
-    "thumb": "talent-pool/training-programs.webp",
-    "kind": "Adobe XD design"
-  }
-],
-    "mediaPreviews": {}
-  },
-  {
-    ht": 1311
+      {
+        "image": "talent-pool/guest-home.webp",
+        "thumb": "talent-pool/guest-home.webp",
+        "caption": "Platform homepage",
+        "group": "Overview",
+        "kind": "Adobe XD design"
+      },
+      {
+        "image": "talent-pool/login.webp",
+        "thumb": "talent-pool/login.webp",
+        "caption": "Login and account access",
+        "group": "Candidate experience",
+        "kind": "Adobe XD design"
+      },
+      {
+        "image": "talent-pool/sign-up.webp",
+        "thumb": "talent-pool/sign-up.webp",
+        "caption": "Account registration",
+        "group": "Candidate experience",
+        "kind": "Adobe XD design"
+      },
+      {
+        "image": "talent-pool/candidate-home.webp",
+        "thumb": "talent-pool/candidate-home.webp",
+        "caption": "Candidate homepage and job recommendations",
+        "group": "Candidate experience",
+        "kind": "Adobe XD design"
+      },
+      {
+        "image": "talent-pool/candidate-search.webp",
+        "thumb": "talent-pool/candidate-search.webp",
+        "caption": "Job search and filters",
+        "group": "Candidate experience",
+        "kind": "Adobe XD design"
+      },
+      {
+        "image": "talent-pool/candidate-profile.webp",
+        "thumb": "talent-pool/candidate-profile.webp",
+        "caption": "Candidate profile and application progress",
+        "group": "Candidate experience",
+        "kind": "Adobe XD design"
+      },
+      {
+        "image": "talent-pool/employer-dashboard.webp",
+        "thumb": "talent-pool/employer-dashboard.webp",
+        "caption": "Employer hiring dashboard",
+        "group": "Employer experience",
+        "kind": "Adobe XD design"
+      },
+      {
+        "image": "talent-pool/job-post.webp",
+        "thumb": "talent-pool/job-post.webp",
+        "caption": "Job posting interface",
+        "group": "Employer experience",
+        "kind": "Adobe XD design"
+      },
+      {
+        "image": "talent-pool/company-page.webp",
+        "thumb": "talent-pool/company-page.webp",
+        "caption": "Company profile",
+        "group": "Employer experience",
+        "kind": "Adobe XD design"
+      },
+      {
+        "image": "talent-pool/pricing.webp",
+        "thumb": "talent-pool/pricing.webp",
+        "caption": "Employer pricing plans",
+        "group": "Employer experience",
+        "kind": "Adobe XD design"
+      },
+      {
+        "image": "talent-pool/pricing-alternate.webp",
+        "thumb": "talent-pool/pricing-alternate.webp",
+        "caption": "Additional pricing layout",
+        "group": "Employer experience",
+        "kind": "Adobe XD design"
+      },
+      {
+        "image": "talent-pool/team-setup.webp",
+        "thumb": "talent-pool/team-setup.webp",
+        "caption": "Team member setup",
+        "group": "Employer experience",
+        "kind": "Adobe XD design"
+      },
+      {
+        "image": "talent-pool/training-programs.webp",
+        "thumb": "talent-pool/training-programs.webp",
+        "caption": "Training programmes",
+        "group": "Employer experience",
+        "kind": "Adobe XD design"
       }
-    }
+    ],
+    "mediaPreviews": {},
+    "imageSource": "Original Adobe XD screens"
   },
   {
     "id": "arabian-skylark",
@@ -1052,72 +1051,73 @@ const star = '<svg class="hero-star" viewBox="0 0 100 100" aria-hidden="true"><p
         "height": 2121
       }
     ],
-    "mediaPreviews": {"id": "digital-presence",
+    "mediaPreviews": {}
+  },
+  {
+    "id": "digital-presence",
     "title": "Web Design & Development",
     "category": "ui",
     "type": "Web design & development",
     "client": "Corporate · Energy · Recruitment",
     "className": "web",
     "image": "web-design/cover.webp",
-    "alt": "Koragon website design shown on a dark laptop mockup",
+    "alt": "Koragon website design on a dark laptop mockup",
     "role": "Web design, UI/UX & development",
     "summary": "Responsive websites for immigration, consulting, industrial, energy and recruitment businesses.",
     "description": "I designed and developed websites for Unifyworld, Koragon, SERVTECH, General Tech, MBE, and Talent Share—working across immigration, consulting, industrial services, energy, and recruitment. My focus was clear navigation, responsive layouts, and cohesive branding, using tools including Wix and Spline where appropriate.",
     "images": [
-  [
-    "web-design/cover.webp",
-    "Koragon website — laptop mockup cover"
-  ]
-],
+      [
+        "web-design/cover.webp",
+        "Koragon website — laptop mockup cover"
+      ]
+    ],
     "pending": "Individual project dates, role breakdowns, and current live website links are pending.",
     "detailImages": [
-  {
-    "image": "web-design/unifyworld.webp",
-    "thumb": "web-design/unifyworld.webp",
-    "caption": "Unifyworld — immigration and management consultancy",
-    "group": "Corporate & consulting",
-    "kind": "Website design"
-  },
-  {
-    "image": "web-design/koragon.webp",
-    "thumb": "web-design/koragon.webp",
-    "caption": "Koragon — business consulting website",
-    "group": "Corporate & consulting",
-    "kind": "Website design"
-  },
-  {
-    "image": "web-design/talent-share.webp",
-    "thumb": "web-design/talent-share.webp",
-    "caption": "Talent Share — recruitment and business solutions",
-    "group": "Corporate & consulting",
-    "kind": "Website design"
-  },
-  {
-    "image": "web-design/servtech.webp",
-    "thumb": "web-design/servtech.webp",
-    "caption": "SERVTECH — industrial services website",
-    "group": "Industrial & energy",
-    "kind": "Website design"
-  },
-  {
-    "image": "web-design/general-tech.webp",
-    "thumb": "web-design/general-tech.webp",
-    "caption": "General Tech — instrumentation and maintenance",
-    "group": "Industrial & energy",
-    "kind": "Website design"
-  },
-  {
-    "image": "web-design/mbe.webp",
-    "thumb": "web-design/mbe.webp",
-    "caption": "MBE — energy sector website",
-    "group": "Industrial & energy",
-    "kind": "Website design"
-  }
-],
-    "mediaPreviews": {}
-  },
-  {
-    }
+      {
+        "image": "web-design/unifyworld.webp",
+        "thumb": "web-design/unifyworld.webp",
+        "caption": "Unifyworld — immigration and management consultancy",
+        "group": "Corporate & consulting",
+        "kind": "Website design"
+      },
+      {
+        "image": "web-design/koragon.webp",
+        "thumb": "web-design/koragon.webp",
+        "caption": "Koragon — business consulting website",
+        "group": "Corporate & consulting",
+        "kind": "Website design"
+      },
+      {
+        "image": "web-design/talent-share.webp",
+        "thumb": "web-design/talent-share.webp",
+        "caption": "Talent Share — recruitment and business solutions",
+        "group": "Corporate & consulting",
+        "kind": "Website design"
+      },
+      {
+        "image": "web-design/servtech.webp",
+        "thumb": "web-design/servtech.webp",
+        "caption": "SERVTECH — industrial services website",
+        "group": "Industrial & energy",
+        "kind": "Website design"
+      },
+      {
+        "image": "web-design/general-tech.webp",
+        "thumb": "web-design/general-tech.webp",
+        "caption": "General Tech — instrumentation and maintenance",
+        "group": "Industrial & energy",
+        "kind": "Website design"
+      },
+      {
+        "image": "web-design/mbe.webp",
+        "thumb": "web-design/mbe.webp",
+        "caption": "MBE — energy sector website",
+        "group": "Industrial & energy",
+        "kind": "Website design"
+      }
+    ],
+    "mediaPreviews": {},
+    "imageSource": "Selected website designs"
   },
   {
     "id": "painting-room",

@@ -1139,6 +1139,10 @@ const paintings = [
   {image:'painting-02',label:'Painting 02',alt:'A fantasy centaur figure standing in a sunlit field'},
   {image:'painting-03',label:'Painting 03',alt:'An expressive floating figure, blue flowers, and butterflies against a dark background'}
 ];
+const newPaintingCandidates = [
+  {image:'painting-04',label:'Painting 04',alt:'Grayscale illustration of a man holding a lyre, with a vivid yellow sun behind him',note:'Original digital artwork'},
+  {image:'painting-05',label:'Painting 05',alt:'Illustrated woman wearing a cream sari with gold trim against a textured green background',note:'Original digital artwork'}
+];
 const categories = [{id:'all',label:'All work'},{id:'ui',label:'UI & web'},{id:'campaign',label:'Campaigns'},{id:'branding',label:'Logo & identity'},{id:'print',label:'Print'},{id:'packaging',label:'Packaging'},{id:'painting',label:'Painting'}];
 const matchesCategory=(project,id)=>id==='all'||project.category===id;
 const state = {page:'home',filter:'all',query:'',project:0,art:0,presentation:0,section:0};
@@ -1196,7 +1200,7 @@ function about() {
 function contact() {return `<div class="wrap contact-page"><div class="contact-layout"><section><p class="eyebrow"><span class="dot"></span>Contact / A conversation starts here</p><h1>LET’S MAKE<br>SOMETHING<br><em>MATTER.</em></h1><p class="contact-copy">Have a brief, a question, or the beginning of an idea? Let’s talk about it.</p><div class="contact-options"><div class="email-row"><a href="mailto:akhilts525@gmail.com">akhilts525@gmail.com</a><button class="copy-button" data-copy aria-label="Copy email address" title="Copy email address">⧉</button></div><a class="text-link" href="tel:+971507057831">+971 50 705 7831 <span aria-hidden="true">↗</span></a><a class="text-link" href="https://www.linkedin.com/in/akhilts-design" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a></div></section>
   <form class="contact-form" id="contact-form"><h2>What are you thinking?</h2><p>A few details to get the conversation going.</p><div class="form-row"><label class="field"><span>Your name *</span><input name="name" autocomplete="name" placeholder="Your name" required maxlength="100"></label><label class="field"><span>Email address *</span><input name="email" type="email" autocomplete="email" placeholder="you@company.com" required maxlength="150"></label></div><label class="field"><span>I’m interested in</span><select name="interest"><option>Let’s explore an idea</option><option>Brand & campaign design</option><option>UI & web design</option><option>Print & editorial</option><option>Painting & illustration</option></select></label><label class="field"><span>A little about your project *</span><textarea name="message" placeholder="The idea, the challenge, the possibilities…" required minlength="10" maxlength="5000">${esc(contactInterest)}</textarea></label><button type="submit" class="button">Open email draft ${arrow}</button><p class="form-note">Opens your email app with these details. You review and send the message there.</p><p class="form-status" id="form-status" role="status" aria-live="polite"></p></form></div><div class="contact-sidenote"><span>Based in the UAE · From Kerala, India</span><span>Creative design / Brand communication / UI design</span></div></div>`;}
 
-function gallery() {return `<div class="wrap"><section class="gallery-intro"><p class="eyebrow"><span class="dot"></span>Personal practice / @Mr_moonstruck_</p><h1>The painting<br><span>room.</span></h1><p>My personal painting practice explores character, colour, and mood. These selected works are a space to tell stories, experiment with imagery, and follow an idea beyond a commercial brief.</p></section><div class="gallery-toolbar"><span>03 paintings · Selected from the existing portfolio</span><span>Open an artwork to look closer ↗</span></div><section class="gallery-grid" aria-label="Painting collection">${paintings.map((p,i)=>`<button class="art-card" data-art="${i}" aria-label="Enlarge ${p.label}"><div class="art-image"><img src="${imagePath(p.image)}" alt="${p.alt}" loading="lazy" decoding="async" width="440" height="568"><span class="expand" aria-hidden="true">⤢</span></div><h2>${p.label}</h2><p>Title & year pending · Portfolio crop</p></button>`).join('')}</section><div class="gallery-pending"><div><h3>More to hang here.</h3><p>Placeholder for additional paintings. Original high-resolution files, artwork titles, dates, and medium details are pending. The images above are crops from my existing portfolio.</p></div><span class="plus" aria-hidden="true">+</span></div>${contactStrip()}</div>`;}
+function gallery() {return `<div class="wrap"><section class="gallery-intro"><p class="eyebrow"><span class="dot"></span>Personal practice / @Mr_moonstruck_</p><h1>The painting<br><span>room.</span></h1><p>My personal painting practice explores character, colour, and mood. These selected works are a space to tell stories, experiment with imagery, and follow an idea beyond a commercial brief.</p></section><div class="gallery-toolbar"><span>${String(paintings.length).padStart(2,'0')} paintings · Selected artworks</span><span>Open an artwork to look closer ↗</span></div><section class="gallery-grid" aria-label="Painting collection">${paintings.map((p,i)=>`<button class="art-card" data-art="${i}" aria-label="Enlarge ${p.label}"><div class="art-image"><img src="${imagePath(p.image)}" alt="${p.alt}" loading="lazy" decoding="async" width="440" height="568"><span class="expand" aria-hidden="true">⤢</span></div><h2>${p.label}</h2><p>${p.note||'Title & year pending · Portfolio crop'}</p></button>`).join('')}</section><div class="gallery-pending"><div><h3>More to hang here.</h3><p>More original artwork and details will be added to this collection over time.</p></div><span class="plus" aria-hidden="true">+</span></div>${contactStrip()}</div>`;}
 
 function closeMenu(returnFocus=false) {
   const button=$('.menu-toggle');button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','Open navigation');$('#mobile-nav').hidden=true;if(returnFocus)button.focus();
@@ -1279,7 +1283,7 @@ function renderProject() {
 function stepProject(direction){const browse=projects.filter(p=>p.category!=='painting');const index=browse.indexOf(projects[state.project]);openProject(browse[(index+direction+browse.length)%browse.length].id);$('#project-dialog .close-button').focus({preventScroll:true});}
 function openArt(index) {
   state.art=(index+paintings.length)%paintings.length;const p=paintings[state.art];const dialog=$('#art-dialog');
-  dialog.innerHTML=`<div class="dialog-top"><span>The painting room</span><button class="close-button" data-close="art-dialog" aria-label="Close artwork" autofocus>×</button></div><div class="art-viewer"><img src="${imagePath(p.image)}" alt="${p.alt}"><div class="art-info"><div class="art-counter" aria-live="polite">${String(state.art+1).padStart(2,'0')} / 03</div><h2 id="art-title">${p.label}</h2><p>Artwork title, year, and medium pending.<br><br>Image cropped from the existing portfolio. Original high-resolution file pending.</p><div class="dialog-next"><button class="icon-button" data-art-step="-1" aria-label="Previous painting">←</button><button class="icon-button" data-art-step="1" aria-label="Next painting">→</button></div></div></div>`;
+  dialog.innerHTML=`<div class="dialog-top"><span>The painting room</span><button class="close-button" data-close="art-dialog" aria-label="Close artwork" autofocus>×</button></div><div class="art-viewer"><img src="${imagePath(p.image)}" alt="${p.alt}"><div class="art-info"><div class="art-counter" aria-live="polite">${String(state.art+1).padStart(2,'0')} / ${String(paintings.length).padStart(2,'0')}</div><h2 id="art-title">${p.label}</h2><p>Artwork title, year, and medium pending.<br><br>${p.note||'Image cropped from the existing portfolio. Original high-resolution file pending.'}</p><div class="dialog-next"><button class="icon-button" data-art-step="-1" aria-label="Previous painting">←</button><button class="icon-button" data-art-step="1" aria-label="Next painting">→</button></div></div></div>`;
   if(!dialog.open)dialog.showModal();document.body.classList.add('locked');dialog.scrollTop=0;
 }
 function toast(message){clearTimeout(toastTimer);$('#toast').textContent=message;$('#toast').classList.add('show');toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),3000);}
@@ -1320,4 +1324,26 @@ document.querySelectorAll('dialog').forEach(dialog=>{
 });
 matchMedia('(min-width:701px)').addEventListener('change',()=>closeMenu());
 window.addEventListener('hashchange',()=>route());
+// Optional paintings appear only once the original image files are present.
+// This keeps the existing gallery intact until the two new assets are uploaded.
+function loadNewPaintingsIfAvailable() {
+  Promise.all(newPaintingCandidates.map(art => new Promise(resolve => {
+    const image = new Image();
+    image.onload = () => resolve(art);
+    image.onerror = () => resolve(null);
+    image.src = imagePath(art.image);
+  }))).then(results => {
+    if(results.some(art => !art)) return;
+    for(const art of results) {
+      if(!paintings.some(existing => existing.image === art.image)) paintings.push(art);
+    }
+    if(state.page === 'paintings' && !$('#art-dialog').open) {
+      const y=window.scrollY;
+      $('#main').innerHTML=gallery();
+      window.scrollTo({top:y,behavior:'instant'});
+      observeReveals();
+    }
+  });
+}
 route(true);
+loadNewPaintingsIfAvailable();

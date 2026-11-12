@@ -2,62 +2,123 @@
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const imagePath = name => { const path = `assets/${name}${/\.(?:avif|webp|png|jpe?g|svg)$/i.test(name)?'':'.webp'}`; return /^arabian-skylark-(?:home|catalogue|quote)\.jpg$/i.test(name) ? `${path}?v=20261110-new` : path; };
+const imagePath = name => { const path = /^talent-pool\//.test(name) ? name : `assets/${name}${/\.(?:avif|webp|png|jpe?g|svg)$/i.test(name)?'':'.webp'}`; return /^arabian-skylark-(?:home|catalogue|quote)\.jpg$/i.test(name) ? `${path}?v=20261110-new` : path; };
 const arrow = '<span class="arrow" aria-hidden="true">↗</span>';
-const star = '<svg class="hero-star" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" d="M43 0h14v32l23-23 11 11-23 23h32v14H68l23 23-11 11-23-23v32H43V68L20 91 9 80l23-23H0V43h32L9 20 20 9l23 23Z"/></svg>';
-const projects = [
-  {
-    "id": "talent-pool",
+const star = '<svg class="hero-star" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" d="M43 0h14v32l23-23 11 11-23 23h32v14H68l23 23-11 11-23-23v32H43V68L20 91 9 80l23-23H0V43h32L9 20 20 9l23 23Z"/"id": "talent-pool",
     "title": "Talent Pool",
     "category": "ui",
     "type": "UI & UX design",
     "client": "Recruitment platform",
     "className": "talent",
-    "image": "talentpool",
-    "alt": "Talent Pool employer recruitment interface with mint and teal visual system",
+    "image": "talent-pool/cover.webp",
+    "alt": "Talent Pool recruitment platform homepage presented on a laptop mockup",
     "role": "UI design for candidate & employer interfaces",
     "summary": "A recruitment interface that brings job discovery and hiring into focus.",
     "description": "Designed Talent Pool’s candidate and employer interfaces, from job search and application tracking to job posting and applicant management. I researched existing hiring platforms to understand both user journeys, then designed and prototyped a clearer, more intuitive experience in Adobe XD.",
     "images": [
-      [
-        "talentpool",
-        "Employer entry point"
-      ],
-      [
-        "talentpool-login",
-        "Account access"
-      ],
-      [
-        "talentpool-home",
-        "Employer discovery"
-      ],
-      [
-        "talentpool-dashboard",
-        "Hiring overview"
-      ]
-    ],
+  [
+    "talent-pool/cover.webp",
+    "Talent Pool — website mockup"
+  ]
+],
     "pending": "Project year, process documentation, and final case study are pending. Screens are taken from the existing portfolio.",
-    "detailImages": [],
-    "mediaPreviews": {
-      "talentpool": {
-        "thumb": "project-details/talent-pool-overview-1-thumb.webp",
-        "width": 1016,
-        "height": 627
-      },
-      "talentpool-login": {
-        "thumb": "project-details/talent-pool-overview-2-thumb.webp",
-        "width": 974,
-        "height": 546
-      },
-      "talentpool-home": {
-        "thumb": "project-details/talent-pool-overview-3-thumb.webp",
-        "width": 1027,
-        "height": 910
-      },
-      "talentpool-dashboard": {
-        "thumb": "project-details/talent-pool-overview-4-thumb.webp",
-        "width": 1020,
-        "height": 1311
+    "detailImages": [
+  {
+    "image": "talent-pool/guest-home.webp",
+    "caption": "Platform homepage",
+    "group": "Overview",
+    "thumb": "talent-pool/guest-home.webp",
+    "kind": "Adobe XD design"
+  },
+  {
+    "image": "talent-pool/login.webp",
+    "caption": "Login and account access",
+    "group": "Candidate experience",
+    "thumb": "talent-pool/login.webp",
+    "kind": "Adobe XD design"
+  },
+  {
+    "image": "talent-pool/sign-up.webp",
+    "caption": "Account registration",
+    "group": "Candidate experience",
+    "thumb": "talent-pool/sign-up.webp",
+    "kind": "Adobe XD design"
+  },
+  {
+    "image": "talent-pool/candidate-home.webp",
+    "caption": "Candidate homepage and job recommendations",
+    "group": "Candidate experience",
+    "thumb": "talent-pool/candidate-home.webp",
+    "kind": "Adobe XD design"
+  },
+  {
+    "image": "talent-pool/candidate-search.webp",
+    "caption": "Job search and filters",
+    "group": "Candidate experience",
+    "thumb": "talent-pool/candidate-search.webp",
+    "kind": "Adobe XD design"
+  },
+  {
+    "image": "talent-pool/candidate-profile.webp",
+    "caption": "Candidate profile and application progress",
+    "group": "Candidate experience",
+    "thumb": "talent-pool/candidate-profile.webp",
+    "kind": "Adobe XD design"
+  },
+  {
+    "image": "talent-pool/employer-dashboard.webp",
+    "caption": "Employer hiring dashboard",
+    "group": "Employer experience",
+    "thumb": "talent-pool/employer-dashboard.webp",
+    "kind": "Adobe XD design"
+  },
+  {
+    "image": "talent-pool/job-post.webp",
+    "caption": "Job posting interface",
+    "group": "Employer experience",
+    "thumb": "talent-pool/job-post.webp",
+    "kind": "Adobe XD design"
+  },
+  {
+    "image": "talent-pool/company-page.webp",
+    "caption": "Company profile",
+    "group": "Employer experience",
+    "thumb": "talent-pool/company-page.webp",
+    "kind": "Adobe XD design"
+  },
+  {
+    "image": "talent-pool/pricing.webp",
+    "caption": "Employer pricing plans",
+    "group": "Employer experience",
+    "thumb": "talent-pool/pricing.webp",
+    "kind": "Adobe XD design"
+  },
+  {
+    "image": "talent-pool/pricing-alternate.webp",
+    "caption": "Additional pricing layout",
+    "group": "Employer experience",
+    "thumb": "talent-pool/pricing-alternate.webp",
+    "kind": "Adobe XD design"
+  },
+  {
+    "image": "talent-pool/team-setup.webp",
+    "caption": "Team member setup",
+    "group": "Employer experience",
+    "thumb": "talent-pool/team-setup.webp",
+    "kind": "Adobe XD design"
+  },
+  {
+    "image": "talent-pool/training-programs.webp",
+    "caption": "Training programmes",
+    "group": "Employer experience",
+    "thumb": "talent-pool/training-programs.webp",
+    "kind": "Adobe XD design"
+  }
+],
+    "mediaPreviews": {}
+  },
+  {
+    ht": 1311
       }
     }
   },

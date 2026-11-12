@@ -1056,16 +1056,16 @@ const star = '<svg class="hero-star" viewBox="0 0 100 100" aria-hidden="true"><p
   },
   {
     "id": "digital-presence",
-    "title": "Digital presence",
+    "title": "Web Design & Development",
     "category": "ui",
-    "type": "Web design",
-    "client": "Corporate & recruitment",
+    "type": "Web design & development",
+    "client": "Corporate · Energy · Recruitment",
     "className": "web",
     "image": "websites",
     "alt": "Angled collection of corporate and recruitment website screens on a black background",
-    "role": "Website design & development",
-    "summary": "Website design and development for corporate, industrial, and recruitment businesses.",
-    "description": "My website work brings together interface design and development across SERVTECH, General Tech, MBE, Koragon, and Talent Pool. These selected screens show how I adapt visual direction and page layouts to different businesses, using platforms including Wix to bring the designs to life.",
+    "role": "Web design, UI/UX & development",
+    "summary": "Responsive websites for immigration, consulting, industrial, energy and recruitment businesses.",
+    "description": "I designed and developed websites for Unifyworld, Koragon, SERVTECH, General Tech, MBE, and Talent Share—working across immigration, consulting, industrial services, energy, and recruitment. My focus was clear navigation, responsive layouts, and cohesive branding, using tools including Wix and Spline where appropriate.",
     "images": [
       [
         "websites",

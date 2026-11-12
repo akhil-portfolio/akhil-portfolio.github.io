@@ -2,7 +2,7 @@
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const imagePath = name => { const path = /^talent-pool\//.test(name) ? name : `assets/${name}${/\.(?:avif|webp|png|jpe?g|svg)$/i.test(name)?'':'.webp'}`; return /^arabian-skylark-(?:home|catalogue|quote)\.jpg$/i.test(name) ? `${path}?v=20261110-new` : path; };
+const imagePath = name => { const path = /^(?:talent-pool|web-design)\//.test(name) ? name : `assets/${name}${/\.(?:avif|webp|png|jpe?g|svg)$/i.test(name)?'':'.webp'}`; return /^arabian-skylark-(?:home|catalogue|quote)\.jpg$/i.test(name) ? `${path}?v=20261110-new` : path; };
 const arrow = '<span class="arrow" aria-hidden="true">↗</span>';
 const star = '<svg class="hero-star" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" d="M43 0h14v32l23-23 11 11-23 23h32v14H68l23 23-11 11-23-23v32H43V68L20 91 9 80l23-23H0V43h32L9 20 20 9l23 23Z"/"id": "talent-pool",
     "title": "Talent Pool",
@@ -1052,34 +1052,71 @@ const star = '<svg class="hero-star" viewBox="0 0 100 100" aria-hidden="true"><p
         "height": 2121
       }
     ],
-    "mediaPreviews": {}
-  },
-  {
-    "id": "digital-presence",
+    "mediaPreviews": {"id": "digital-presence",
     "title": "Web Design & Development",
     "category": "ui",
     "type": "Web design & development",
     "client": "Corporate · Energy · Recruitment",
     "className": "web",
-    "image": "websites",
-    "alt": "Angled collection of corporate and recruitment website screens on a black background",
+    "image": "web-design/cover.webp",
+    "alt": "Koragon website design shown on a dark laptop mockup",
     "role": "Web design, UI/UX & development",
     "summary": "Responsive websites for immigration, consulting, industrial, energy and recruitment businesses.",
     "description": "I designed and developed websites for Unifyworld, Koragon, SERVTECH, General Tech, MBE, and Talent Share—working across immigration, consulting, industrial services, energy, and recruitment. My focus was clear navigation, responsive layouts, and cohesive branding, using tools including Wix and Spline where appropriate.",
     "images": [
-      [
-        "websites",
-        "Website collection from the existing portfolio"
-      ]
-    ],
+  [
+    "web-design/cover.webp",
+    "Koragon website — laptop mockup cover"
+  ]
+],
     "pending": "Individual project dates, role breakdowns, and current live website links are pending.",
-    "detailImages": [],
-    "mediaPreviews": {
-      "websites": {
-        "thumb": "project-details/digital-presence-overview-1-thumb.webp",
-        "width": 1800,
-        "height": 1532
-      }
+    "detailImages": [
+  {
+    "image": "web-design/unifyworld.webp",
+    "thumb": "web-design/unifyworld.webp",
+    "caption": "Unifyworld — immigration and management consultancy",
+    "group": "Corporate & consulting",
+    "kind": "Website design"
+  },
+  {
+    "image": "web-design/koragon.webp",
+    "thumb": "web-design/koragon.webp",
+    "caption": "Koragon — business consulting website",
+    "group": "Corporate & consulting",
+    "kind": "Website design"
+  },
+  {
+    "image": "web-design/talent-share.webp",
+    "thumb": "web-design/talent-share.webp",
+    "caption": "Talent Share — recruitment and business solutions",
+    "group": "Corporate & consulting",
+    "kind": "Website design"
+  },
+  {
+    "image": "web-design/servtech.webp",
+    "thumb": "web-design/servtech.webp",
+    "caption": "SERVTECH — industrial services website",
+    "group": "Industrial & energy",
+    "kind": "Website design"
+  },
+  {
+    "image": "web-design/general-tech.webp",
+    "thumb": "web-design/general-tech.webp",
+    "caption": "General Tech — instrumentation and maintenance",
+    "group": "Industrial & energy",
+    "kind": "Website design"
+  },
+  {
+    "image": "web-design/mbe.webp",
+    "thumb": "web-design/mbe.webp",
+    "caption": "MBE — energy sector website",
+    "group": "Industrial & energy",
+    "kind": "Website design"
+  }
+],
+    "mediaPreviews": {}
+  },
+  {
     }
   },
   {
